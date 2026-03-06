@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane & Fitz — A Japan Wedding Proposal by Married in Japan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF8F5;
+      --dark: #1a1a1a;
+      --darker: #111111;
+      --burgundy: #722F37;
+      --gold: #B8977E;
+      --text-dark: #1a1a1a;
+      --text-grey: #888;
+      --text-light: rgba(250, 248, 245, 0.75);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Sen', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-dark);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    h1 {
+      font-size: clamp(48px, 6vw, 80px);
+      font-weight: 300;
+      line-height: 1.1;
+    }
+    h2 {
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.15;
+    }
+    h3 {
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+
+    /* Section styles */
+    .section-light {
+      background: var(--cream);
+      color: var(--text-dark);
+      padding: 100px 0;
+    }
+    .section-dark {
+      background: var(--dark);
+      color: var(--cream);
+      padding: 100px 0;
+    }
+    .section-large {
+      padding: 140px 0;
+    }
+    .section-burgundy {
+      background: var(--burgundy);
+      color: var(--cream);
+      padding: 100px 0;
+    }
+
+    .label {
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .section-light .label {
+      color: var(--burgundy);
+    }
+
+    .accent-line {
+      width: 40px;
+      height: 2px;
+      background: var(--burgundy);
+      margin: 24px 0;
+    }
+    .section-dark .accent-line,
+    .section-burgundy .accent-line {
+      background: var(--gold);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      background: var(--darker);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+      z-index: 1;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('./hero.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--cream);
+      padding: 0 40px;
+    }
+    .hero-content .label {
+      color: var(--gold);
+      margin-bottom: 30px;
+    }
+    .hero-content h1 {
+      margin-bottom: 30px;
+    }
+    .hero-tagline {
+      font-family: 'Sen', sans-serif;
+      font-size: 15px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+    .hero-detail {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 300;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    /* Image break */
+    .image-break {
+      height: 75vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .image-break::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26,26,26,0.1) 0%, rgba(26,26,26,0.2) 100%);
+    }
+
+    /* Vision */
+    .vision p {
+      font-size: 17px;
+      line-height: 1.9;
+      max-width: 800px;
+      margin-bottom: 24px;
+    }
+    .vision p:last-child { margin-bottom: 0; }
+
+    /* Timeline */
+    .timeline-flow {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+    .timeline-item {
+      text-align: center;
+      padding: 20px 28px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 1px;
+      height: 40px;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.12);
+    }
+    .timeline-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .timeline-title {
+      font-family: 'Sen', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+    .timeline-desc {
+      font-family: 'Sen', sans-serif;
+      font-size: 13px;
+      color: var(--text-light);
+      max-width: 140px;
+      margin: 0 auto;
+    }
+
+    /* Day sections */
+    .day-header {
+      margin-bottom: 40px;
+    }
+    .day-header h2 {
+      margin-top: 12px;
+    }
+    .day-prose {
+      font-size: 16px;
+      line-height: 1.85;
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+    .day-prose p {
+      margin-bottom: 20px;
+    }
+    .day-prose p:last-child { margin-bottom: 0; }
+
+    /* Option cards */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .option-card {
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 0;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+    .section-dark .option-card {
+      border-color: rgba(255,255,255,0.08);
+    }
+    .option-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--burgundy);
+    }
+    .section-dark .option-card:hover {
+      border-color: var(--gold);
+    }
+    .option-card-image {
+      height: 420px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .option-card-body {
+      padding: 30px;
+    }
+    .option-tag {
+      display: inline-block;
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      background: rgba(114, 47, 55, 0.06);
+      padding: 6px 14px;
+      margin-bottom: 16px;
+    }
+    .section-dark .option-tag {
+      color: var(--gold);
+      background: rgba(184, 151, 126, 0.1);
+    }
+    .option-card .accent-line {
+      width: 20px;
+      margin: 12px 0;
+    }
+    .option-card h3 {
+      margin-bottom: 12px;
+      font-size: clamp(20px, 2vw, 24px);
+    }
+    .option-card p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-grey);
+    }
+    .section-dark .option-card p {
+      color: var(--text-light);
+    }
+
+    /* Venue grid - 2x2 for 4 options */
+    .venue-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    /* Scenario cards */
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+    }
+    .scenario-card {
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 40px;
+      transition: all 0.3s ease;
+      background: #fff;
+    }
+    .scenario-card:hover {
+      border-color: var(--burgundy);
+      transform: translateY(-2px);
+    }
+    .scenario-card h3 {
+      margin-bottom: 16px;
+    }
+    .scenario-card p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .scenario-card p:last-child { margin-bottom: 0; }
+    .scenario-tag {
+      display: inline-block;
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      background: rgba(114, 47, 55, 0.06);
+      padding: 6px 14px;
+      margin-bottom: 20px;
+    }
+    .scenario-days {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .scenario-day-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--text-dark);
+    }
+    .scenario-day-item strong {
+      color: var(--burgundy);
+      font-weight: 700;
+      min-width: 50px;
+    }
+
+    /* Look and Feel */
+    .mood-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .mood-item {
+      text-align: center;
+    }
+    .mood-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+    .mood-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .mood-item p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* What We Handle */
+    .handle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 50px;
+    }
+    .handle-column h3 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .handle-list {
+      list-style: none;
+      padding: 0;
+    }
+    .handle-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 15px;
+      color: var(--text-light);
+    }
+    .handle-list li:last-child { border-bottom: none; }
+    .you-handle {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .bilingual-box {
+      margin-top: 50px;
+      padding: 30px 36px;
+      border: 1px solid rgba(184, 151, 126, 0.3);
+      background: rgba(184, 151, 126, 0.05);
+    }
+    .bilingual-box p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+
+    /* Investment */
+    .fee-box {
+      text-align: center;
+      padding: 50px;
+      border: 1px solid rgba(0,0,0,0.08);
+      margin-bottom: 50px;
+    }
+    .fee-box .label { margin-bottom: 20px; }
+    .fee-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(40px, 5vw, 60px);
+      font-weight: 300;
+      color: var(--text-dark);
+      line-height: 1.1;
+    }
+    .fee-equiv {
+      font-size: 15px;
+      color: var(--text-grey);
+      margin-top: 10px;
+    }
+
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+    .cost-table th, .cost-table td {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-family: 'Sen', sans-serif;
+      font-size: 15px;
+    }
+    .cost-table th {
+      text-align: left;
+      font-weight: 600;
+    }
+    .cost-table td:last-child {
+      text-align: right;
+    }
+    .total-row td {
+      font-weight: 700;
+      font-size: 17px;
+      border-top: 2px solid var(--burgundy);
+      border-bottom: none;
+      padding-top: 20px;
+    }
+    .budget-note {
+      margin-top: 40px;
+      padding: 30px 36px;
+      background: rgba(114, 47, 55, 0.04);
+      border-left: 3px solid var(--burgundy);
+    }
+    .budget-note p {
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .budget-note p:last-child { margin-bottom: 0; }
+
+    /* Next Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      margin-top: 60px;
+      text-align: center;
+    }
+    .step-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .step h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+    .step p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .payment-note {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+      color: var(--text-light);
+      letter-spacing: 1px;
+    }
+
+    /* Closing */
+    .closing {
+      text-align: center;
+      padding: 120px 0;
+    }
+    .closing h2 {
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    .closing-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+    .closing-brand {
+      font-family: 'Sen', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container { padding: 0 28px; }
+      .section-light, .section-dark, .section-burgundy { padding: 70px 0; }
+      .section-large { padding: 90px 0; }
+      .image-break { height: 55vh; }
+      .handle-grid { grid-template-columns: 1fr; gap: 40px; }
+      .scenario-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+      .mood-grid { grid-template-columns: 1fr; gap: 30px; }
+      .venue-grid { grid-template-columns: 1fr; }
+      .timeline-flow { flex-direction: column; align-items: center; }
+      .timeline-item:not(:last-child)::after { display: none; }
+      .fee-box { padding: 36px 24px; }
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- HERO -->
+  <!-- ============================================ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="label">A Proposal by Married in Japan</div>
+      <h1>Jane & Fitz</h1>
+      <div class="accent-line" style="margin: 24px auto;"></div>
+      <div class="hero-tagline">Mt. Fuji &middot; Spring 2027 &middot; 12 Guests</div>
+      <div class="hero-detail">A nature wedding at the foot of Japan's most iconic mountain</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- YOUR VISION -->
+  <!-- ============================================ -->
+  <section class="section-light section-large vision">
+    <div class="container fade-in">
+      <div class="label">Your Vision</div>
+      <div class="accent-line"></div>
+      <p>You want something real. Not a production, not a performance. A wedding surrounded by the people who matter most, set against the kind of scenery that makes everyone go quiet for a second. Mt. Fuji in the background. Nature everywhere. The kind of day where Fitz can actually be present, not running on someone else's schedule, and where you both feel like yourselves.</p>
+      <p>You fell in love with Japan together. Four cities in two weeks. You already know what it feels like to be there. Now you want to bring your closest people into that feeling: the calm, the beauty, the food, the little moments that make Japan unlike anywhere else. Twelve of you, ten days, no rush.</p>
+      <p>This isn't about choosing between a big wedding at home and a small one far away. It's about choosing the version that feels most like you. We think Japan is that version, and we want to show you exactly what it could look like.</p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- IMAGE BREAK 1 -->
+  <!-- ============================================ -->
+  <div class="image-break" style="background-image: url('./fuji-lake.jpg'); background-position: center bottom;"></div>
+
+  <!-- ============================================ -->
+  <!-- TIMELINE OVERVIEW -->
+  <!-- ============================================ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="label" style="text-align:center;">Your 10 Days</div>
+      <h2 style="text-align:center;">The Journey at a Glance</h2>
+      <div class="timeline-flow">
+        <div class="timeline-item">
+          <div class="timeline-number">01</div>
+          <div class="timeline-title">Arrive</div>
+          <div class="timeline-desc">Land in Tokyo, settle in</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">02</div>
+          <div class="timeline-title">Welcome</div>
+          <div class="timeline-desc">Meet us, welcome dinner</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">03</div>
+          <div class="timeline-title">Explore</div>
+          <div class="timeline-desc">Tokyo your way</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">04</div>
+          <div class="timeline-title">Travel</div>
+          <div class="timeline-desc">Journey to Mt. Fuji</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">05</div>
+          <div class="timeline-title">Wedding</div>
+          <div class="timeline-desc">Your ceremony day</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">06</div>
+          <div class="timeline-title">Breathe</div>
+          <div class="timeline-desc">Slow morning, travel on</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">07</div>
+          <div class="timeline-title">Discover</div>
+          <div class="timeline-desc">Explore your second city</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">08</div>
+          <div class="timeline-title">Discover</div>
+          <div class="timeline-desc">Continue exploring</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">09</div>
+          <div class="timeline-title">Farewell</div>
+          <div class="timeline-desc">Last day together</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-number">10</div>
+          <div class="timeline-title">Depart</div>
+          <div class="timeline-desc">Head home</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAY 1: ARRIVAL -->
+  <!-- ============================================ -->
+  <section class="section-light">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Day One</div>
+        <h2>Arrival in Tokyo</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>Your group lands in Tokyo. After the long haul from Perth, the priority is simple: get settled, decompress, and soak it in. We'll arrange airport transfers and get everyone to their accommodation in Shinjuku or Shibuya, close to transport links and within walking distance of good food.</p>
+        <p>No agenda tonight. Just wander, eat, sleep. If some of your group have been to Japan before, they'll know the drill. For first-timers, this is their introduction. Let the jet lag sort itself out over a bowl of ramen and a cold beer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAY 2: WELCOME -->
+  <!-- ============================================ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Day Two</div>
+        <h2>Welcome Dinner</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>This is the day your wedding trip officially begins. We'll meet you and your group in person, walk through the week ahead, and answer any questions. Think of it as a casual briefing that turns into a great night out.</p>
+        <p>In the evening, we'll book a welcome dinner at a spot that sets the tone: an izakaya with a private room, or a yakitori restaurant where everyone can sit together and share plates. It's the first time your whole group is in one room in Japan. That energy matters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAY 3: EXPLORE TOKYO -->
+  <!-- ============================================ -->
+  <section class="section-light">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Day Three</div>
+        <h2>Tokyo, Your Way</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>A free day in Tokyo for the group to explore. You've been here before, so you know the rhythm. For your guests who haven't, we'll put together a curated guide with our picks based on what they're into: food markets, temples, shopping, gardens, arcades, whatever fits.</p>
+        <p>During our discovery conversation, we'll learn what your group has and hasn't done in Japan, and we'll tailor suggestions accordingly. If there's a specific experience you want to organize as a group (a cooking class, a sake tasting, a day trip to Kamakura), we can build that in.</p>
+        <p>This is also the last night in Tokyo, so if there's a restaurant you've been dreaming about, this is the night to book it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- IMAGE BREAK 2 -->
+  <!-- ============================================ -->
+  <div class="image-break" style="background-image: url('./fuji-spring.jpg');"></div>
+
+  <!-- ============================================ -->
+  <!-- DAY 4: TRAVEL TO FUJI -->
+  <!-- ============================================ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Day Four</div>
+        <h2>Journey to Mt. Fuji</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>The group travels from Tokyo to the Mt. Fuji area. It's about two hours by highway bus from Shinjuku, or we can arrange a private transfer for a more relaxed ride. The scenery shifts from city to countryside, and then Fuji appears.</p>
+        <p>Check into your ceremony venue accommodation. The rest of the day is about settling in and soaking up the setting. If you're at a ryokan, that means hot springs, a kaiseki dinner, and the kind of quiet that's hard to find anywhere else. For you and Fitz, this is also the afternoon for any final touches: dress fitting, running through the ceremony flow, making sure everything feels right.</p>
+        <p>No pressure. Just presence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAY 5: WEDDING DAY -->
+  <!-- ============================================ -->
+  <section class="section-light section-large">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Day Five</div>
+        <h2>Your Wedding Day</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>This is it. You wake up at the foot of Mt. Fuji, surrounded by the people you love most. The morning is yours: get ready together, take your time, look out the window at that view.</p>
+        <p>The ceremony happens in a setting that's all nature. No church. No banquet hall. Just you, Fitz, your 10 guests, and the mountain. The reception flows naturally into a dinner together: a long table, incredible food, and the kind of conversation that only happens when you put the right people in a beautiful place.</p>
+        <p>The venue options below each offer a different version of this day. All of them put Mt. Fuji front and center. All of them include what matters: the ceremony, the dinner, accommodation for the night, and a photographer to capture it.</p>
+      </div>
+
+      <h3 style="margin-top: 60px; margin-bottom: 10px;">Ceremony & Venue Options</h3>
+      <div class="accent-line"></div>
+
+      <div class="venue-grid">
+
+        <!-- Option A -->
+        <div class="option-card">
+          <div class="option-card-image" style="background-image: url('./venue-a.jpg');"></div>
+          <div class="option-card-body">
+            <div class="option-tag">All-Inclusive</div>
+            <div class="accent-line" style="width:20px; margin: 12px 0;"></div>
+            <h3>The Grand Ryokan</h3>
+            <p>A prestigious 5-star onsen ryokan with a 66,000 sqm Japanese garden and direct Mt. Fuji views. This is the turnkey option: ceremony, reception dinner with drinks, dress and tux, bouquet, cake, one night's stay for all 12 guests, and a photographer are all included. Intimate banquet hall seats up to 26. Hot springs, drum shows, and traditional hospitality round out the experience. Approx. 9,000 AUD for 12 guests.</p>
+          </div>
+        </div>
+
+        <!-- Option B -->
+        <div class="option-card">
+          <div class="option-card-image" style="background-image: url('./venue-b.jpg');"></div>
+          <div class="option-card-body">
+            <div class="option-tag">Creative & Private</div>
+            <div class="accent-line" style="width:20px; margin: 12px 0;"></div>
+            <h3>The Forest Studio</h3>
+            <p>A converted photography studio on a 3,100 sqm estate in the forest at the base of Mt. Fuji. One group per day, completely private. Three bedrooms, two living rooms, a full kitchen, outdoor BBQ deck, and garden terrace. The space is raw, architectural, and surrounded by forest. You'd bring in your own catering (BBQ or private chef) and decorations, giving you total creative freedom. Note: can't see Mt. Fuji from this venue, but the forest setting is stunning.</p>
+          </div>
+        </div>
+
+        <!-- Option C -->
+        <div class="option-card">
+          <div class="option-card-image" style="background-image: url('./venue-c.jpg');"></div>
+          <div class="option-card-body">
+            <div class="option-tag">Luxury Glamping</div>
+            <div class="accent-line" style="width:20px; margin: 12px 0;"></div>
+            <h3>The Highland Retreat</h3>
+            <p>A luxury villa resort at the foot of Mt. Fuji with direct mountain views. Private villa-style rooms with spacious terraces, natural hot springs, a Finnish sauna, and outdoor firepit areas. BBQ dinner under the stars with locally sourced ingredients from the Fuji foothills. The vibe is refined outdoor living: nature forward, but with hotel-level comfort. Multiple villa units can accommodate the full group across the property.</p>
+          </div>
+        </div>
+
+        <!-- Option D -->
+        <div class="option-card">
+          <div class="option-card-image" style="background-image: url('./venue-d.jpg');"></div>
+          <div class="option-card-body">
+            <div class="option-tag">Intimate & Minimal</div>
+            <div class="accent-line" style="width:20px; margin: 12px 0;"></div>
+            <h3>The Private Farmhouse</h3>
+            <p>A single-building private hotel for one group per day, set on farmland near Lake Kawaguchi. Every window frames Mt. Fuji. Finnish sauna, cold plunge using natural Mt. Fuji spring water, and a full kitchen for catering or self-cooking. The design is minimal and intentional: clean lines, natural materials, total quiet. This is the option for couples who want nothing between them and the mountain. Accommodates one group only.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAY 6: SLOW MORNING -->
+  <!-- ============================================ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Day Six</div>
+        <h2>Breathe, Then Move On</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>No alarms. Sleep in. Soak in the hot springs one more time. Have breakfast looking out at the mountain and let the previous day sink in.</p>
+        <p>After checkout, the group travels to your second destination. This is where the trip shifts from wedding to holiday, and you have two options for how those final days unfold.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAYS 7-9: SECOND CITY OPTIONS -->
+  <!-- ============================================ -->
+  <section class="section-light section-large">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Days Seven to Nine</div>
+        <h2>Your Second Chapter</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>After the wedding, you have three full days to explore together before heading home. We see two directions this could go, and both are great. It depends on what feels right for you, Fitz, and your group.</p>
+      </div>
+
+      <div class="scenario-grid">
+
+        <!-- Scenario A -->
+        <div class="scenario-card">
+          <div class="scenario-tag">Scenario A</div>
+          <h3>Return to Kyoto</h3>
+          <p>You've been to Kyoto before, but your guests likely haven't. And honestly, Kyoto is the kind of place that reveals more every time you go. This time you'd experience it as a group: temple walks, street food in Gion, a sake brewery tour, maybe a private tea ceremony.</p>
+          <p>Spring means the tail end of cherry blossom season or the lush green just after. The city is stunning either way. It's the most "Japan" that Japan gets, and for guests who want temples, gardens, and incredible food, this is the move.</p>
+          <div class="scenario-days">
+            <div class="scenario-day-item"><strong>Day 7</strong> Travel to Kyoto, settle in, evening walk through Gion</div>
+            <div class="scenario-day-item"><strong>Day 8</strong> Temples, bamboo grove, group activity (tea ceremony or sake tasting)</div>
+            <div class="scenario-day-item"><strong>Day 9</strong> Free explore, farewell dinner, Nishiki Market</div>
+          </div>
+        </div>
+
+        <!-- Scenario B -->
+        <div class="scenario-card">
+          <div class="scenario-tag">Scenario B</div>
+          <h3>Somewhere New</h3>
+          <p>If you want the second half of the trip to feel completely different, we'd take you somewhere off the tourist trail. Think Tochigi Prefecture (hot spring towns, waterfalls, mountain hiking) or Niigata (rice paddies, craft sake, snow-capped peaks, onsen villages).</p>
+          <p>These are places most tourists never see. Nature-heavy, slow-paced, deeply Japanese in a way that Kyoto and Tokyo aren't. For a group that values being outdoors and experiencing something unexpected, this is the more adventurous choice.</p>
+          <div class="scenario-days">
+            <div class="scenario-day-item"><strong>Day 7</strong> Travel to regional Japan, check into a ryokan or onsen town</div>
+            <div class="scenario-day-item"><strong>Day 8</strong> Hiking, hot springs, local food experiences</div>
+            <div class="scenario-day-item"><strong>Day 9</strong> Explore, farewell dinner at a local izakaya</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- IMAGE BREAK 3 -->
+  <!-- ============================================ -->
+  <div class="image-break" style="background-image: url('./japan-nature.jpg');"></div>
+
+  <!-- ============================================ -->
+  <!-- DAY 10: DEPARTURE -->
+  <!-- ============================================ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="day-header">
+        <div class="label">Day Ten</div>
+        <h2>Departure</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="day-prose">
+        <p>Travel back to Tokyo (or fly direct from a regional airport depending on the second city) and head to the airport. Depending on flight times, there may be time for one last meal or a quick stop in Tokyo on the way.</p>
+        <p>Ten days, one wedding, two cities, and a trip your guests will never stop talking about.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- LOOK & FEEL -->
+  <!-- ============================================ -->
+  <section class="section-dark" style="border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container fade-in">
+      <div class="label" style="text-align:center;">The Look & Feel</div>
+      <h2 style="text-align:center;">Natural, Unhurried, Yours</h2>
+      <div class="accent-line" style="margin: 24px auto;"></div>
+
+      <div class="mood-grid">
+        <div class="mood-item">
+          <div style="height: 200px; background-image: url('./mood-organic.jpg'); background-size: cover; background-position: center; margin-bottom: 20px;"></div>
+          <h3>Organic & Earthy</h3>
+          <p>Unfinished wood, stone, greenery. No gilded ballrooms. The venue is the decor. Think foliage over florals, and candles over chandeliers.</p>
+        </div>
+        <div class="mood-item">
+          <div style="height: 200px; background-image: url('./mood-intimate.jpg'); background-size: cover; background-position: center; margin-bottom: 20px;"></div>
+          <h3>Intimate Scale</h3>
+          <p>Twelve people means one long table, not a seating chart. Everyone is close. Every conversation matters. The small number is the luxury.</p>
+        </div>
+        <div class="mood-item">
+          <div style="height: 200px; background-image: url('./mood-simplicity.jpg'); background-size: cover; background-position: center; margin-bottom: 20px;"></div>
+          <h3>Japanese Simplicity</h3>
+          <p>Clean lines. Quiet beauty. The food speaks for itself. The mountain speaks for itself. The design ethos is: don't compete with nature, frame it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- WHAT WE HANDLE -->
+  <!-- ============================================ -->
+  <section class="section-dark" style="border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container fade-in">
+      <div class="label">What We Handle</div>
+      <h2>So You Can Focus on Being There</h2>
+      <div class="accent-line"></div>
+
+      <div class="handle-grid">
+        <div class="handle-column">
+          <h3>Before the Trip</h3>
+          <ul class="handle-list">
+            <li>Venue research, site visits, and booking</li>
+            <li>Vendor coordination (photographer, florist, officiant, hair & makeup)</li>
+            <li>Accommodation recommendations for the full trip</li>
+            <li>Domestic travel logistics (trains, transfers, buses)</li>
+            <li>Ceremony planning and run-of-show</li>
+            <li>Budget tracking and vendor payments in JPY</li>
+            <li>Restaurant recommendation guide for your trip</li>
+          </ul>
+        </div>
+        <div class="handle-column">
+          <h3>On the Ground</h3>
+          <ul class="handle-list">
+            <li>Day-before setup and coordination</li>
+            <li>Wedding day management from start to finish</li>
+            <li>Vendor oversight and troubleshooting</li>
+            <li>Guest wrangling and timeline management</li>
+            <li>Translation and cultural navigation</li>
+            <li>Welcome dinner coordination</li>
+            <li>Emergency backup planning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="you-handle">
+        <h3>What You Handle</h3>
+        <ul class="handle-list">
+          <li>International flights for you and your guests</li>
+          <li>Passports and travel insurance</li>
+          <li>Your personal style choices (dress, suit, rings, vows)</li>
+          <li>Guest list and RSVPs</li>
+          <li>Any personal touches or details you want to DIY</li>
+        </ul>
+      </div>
+
+      <div class="bilingual-box">
+        <p><strong style="color: var(--gold);">A note on language.</strong> Juri is Japanese and handles all vendor communication, negotiations, and coordination in Japanese. This isn't something you need to think about. Contracts, emails, phone calls, on-site conversations with venue staff, caterers, and florists: it all happens natively. Eamon manages your side of things in English. You always know what's happening, and nothing gets lost in translation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- INVESTMENT -->
+  <!-- ============================================ -->
+  <section class="section-light section-large">
+    <div class="container fade-in">
+      <div class="label">Investment</div>
+      <h2>What This Costs</h2>
+      <div class="accent-line"></div>
+
+      <div class="fee-box">
+        <div class="label">Planning Fee</div>
+        <div class="fee-amount">$4,500 USD</div>
+        <div class="fee-equiv">Approx. $6,390 AUD</div>
+      </div>
+
+      <p style="margin-bottom: 40px; max-width: 800px;">Below is an estimated budget breakdown for the full trip for two, based on spring 2027 peak-season pricing. Guest travel costs are separate. All vendor estimates are based on Juri's 2026 research and will be confirmed closer to booking.</p>
+
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Estimated Cost (AUD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Return flights Perth to Tokyo (x2)</td>
+            <td>$2,400</td>
+          </tr>
+          <tr>
+            <td>Accommodation, 10 nights (~20,000 JPY/night)</td>
+            <td>$1,800</td>
+          </tr>
+          <tr>
+            <td>Wedding venue package (Option A estimate, 12 guests)</td>
+            <td>$9,000</td>
+          </tr>
+          <tr>
+            <td>Domestic travel (trains, buses, transfers)</td>
+            <td>$600</td>
+          </tr>
+          <tr>
+            <td>Planning fee</td>
+            <td>$6,390</td>
+          </tr>
+          <tr>
+            <td>Contingency (meals, activities, extras)</td>
+            <td>$2,200</td>
+          </tr>
+          <tr class="total-row">
+            <td>Estimated Total</td>
+            <td>$22,390</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-size: 14px; color: var(--text-grey); margin-bottom: 40px; line-height: 1.7;"><strong>What's included in the venue line item (Option A):</strong> ceremony, reception dinner with free-flow drinks, wedding dress and tux, bouquet, cake, photographer, and one night's accommodation for all 12 guests. For Options B, C, and D, these vendors would be sourced separately and costs may vary.</p>
+
+      <div class="budget-note">
+        <p><strong>A note on budget.</strong> Your stated budget is 20,000 AUD. Using the all-inclusive ryokan venue (Option A) and current exchange rates (1 AUD ≈ 111 JPY, 1 USD ≈ 1.42 AUD), the estimate comes in at around $22,390 AUD. That's over by about $2,400, but there are real ways to close that gap.</p>
+        <p>Season is the biggest lever: going slightly off-peak (late May instead of late March/early April) brings flights and accommodation down noticeably. Accommodation costs also shift depending on whether guests cover their own rooms at the wedding venue. The 9,000 AUD package includes one night for all 12 guests, so if guests pay their own share, that saves you $2,000-3,000 AUD from your personal budget and puts you well under 20K.</p>
+        <p>The bespoke venue options (B, C, D) give you more flexibility on ceremony costs but require sourcing catering, photographer, and decor separately. Depending on choices, these could come in above or below the all-inclusive option. We'd price these out in detail once you choose a direction.</p>
+        <p>We'll always be transparent about where the money is going. No hidden fees, no surprises.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- NEXT STEPS -->
+  <!-- ============================================ -->
+  <section class="section-dark">
+    <div class="container fade-in">
+      <div class="label" style="text-align:center;">Next Steps</div>
+      <h2 style="text-align:center;">How This Comes Together</h2>
+      <div class="accent-line" style="margin: 24px auto;"></div>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>We Talk</h3>
+          <p>We jump on a follow-up call to walk through this proposal, answer questions, and decide on your venue and second-city direction. This is where the plan gets specific.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>You Commit</h3>
+          <p>If it feels right, you sign our planning agreement and pay the first instalment. We get to work immediately: venue holds, vendor outreach, and timeline building.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>We Build It</h3>
+          <p>From here, we handle the coordination. You'll have a shared planning tracker, regular check-ins, and direct access to us throughout. Juri starts working with vendors on the ground in Japan.</p>
+        </div>
+      </div>
+
+      <div class="payment-note">
+        75% deposit at signing &middot; 25% balance due 3 months before the event
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CLOSING -->
+  <!-- ============================================ -->
+  <section class="section-burgundy closing">
+    <div class="container fade-in">
+      <h2>We'd love to build this with you.</h2>
+      <div class="accent-line" style="margin: 24px auto;"></div>
+      <div class="closing-names">Juri & Eamon</div>
+      <div class="closing-brand">Married in Japan</div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SCROLL ANIMATION -->
+  <!-- ============================================ -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
